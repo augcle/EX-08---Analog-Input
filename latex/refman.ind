@@ -1,0 +1,49 @@
+\begin{theindex}
+
+  \item {AnalogInput Directory Reference}, \hyperpage{5}
+  \item {AnalogInput.ino}
+    \subitem {loop}, \hyperpage{8}
+    \subitem {MAX\_INPUT\_VOLT}, \hyperpage{8}
+    \subitem {pinB}, \hyperpage{8}
+    \subitem {pinG}, \hyperpage{9}
+    \subitem {pinR}, \hyperpage{9}
+    \subitem {potPin}, \hyperpage{9}
+    \subitem {setRGB}, \hyperpage{8}
+    \subitem {setup}, \hyperpage{8}
+    \subitem {VREF}, \hyperpage{9}
+  \item {AnalogInput/AnalogInput.ino}, \hyperpage{7}
+
+  \indexspace
+
+  \item {loop}
+    \subitem {AnalogInput.ino}, \hyperpage{8}
+
+  \indexspace
+
+  \item {MAX\_INPUT\_VOLT}
+    \subitem {AnalogInput.ino}, \hyperpage{8}
+
+  \indexspace
+
+  \item {pinB}
+    \subitem {AnalogInput.ino}, \hyperpage{8}
+  \item {pinG}
+    \subitem {AnalogInput.ino}, \hyperpage{9}
+  \item {pinR}
+    \subitem {AnalogInput.ino}, \hyperpage{9}
+  \item {potPin}
+    \subitem {AnalogInput.ino}, \hyperpage{9}
+
+  \indexspace
+
+  \item {setRGB}
+    \subitem {AnalogInput.ino}, \hyperpage{8}
+  \item {setup}
+    \subitem {AnalogInput.ino}, \hyperpage{8}
+
+  \indexspace
+
+  \item {VREF}
+    \subitem {AnalogInput.ino}, \hyperpage{9}
+
+\end{theindex}

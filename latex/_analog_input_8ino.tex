@@ -1,0 +1,143 @@
+\doxysection{Analog\+Input/\+\+Analog\+Input.ino File Reference}
+\hypertarget{_analog_input_8ino}{}\label{_analog_input_8ino}\index{AnalogInput/AnalogInput.ino@{AnalogInput/AnalogInput.ino}}
+{\ttfamily \+\#include $<$Arduino.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{_analog_input_8ino_a69352682ab45c5d2781a83171b820c83}{set\+RGB}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Write PWM values to the RGB LED. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_analog_input_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Arduino setup function. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_analog_input_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Arduino main loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \doxymbox{\hyperlink{_analog_input_8ino_a47c8bfff20afd60331358be0b0095d55}{pot\+Pin}} = A0
+\begin{DoxyCompactList}\small\item\em Analog input pin connected to the potentiometer wiper. \end{DoxyCompactList}\item 
+const float \doxymbox{\hyperlink{_analog_input_8ino_aa29df58d662950252b03ab8728847318}{VREF}} = 5.\+0
+\begin{DoxyCompactList}\small\item\em ADC reference voltage in volts. \end{DoxyCompactList}\item 
+const float \doxymbox{\hyperlink{_analog_input_8ino_a38d31debacab12adef424a4fcc632e66}{MAX\+\_\+\+INPUT\+\_\+\+VOLT}} = 5.\+0
+\begin{DoxyCompactList}\small\item\em Maximum expected input voltage from the potentiometer in volts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ RGB PWM pins}\par
+{\em PWM output pins used to drive the RGB LED channels. }\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \doxymbox{\hyperlink{_analog_input_8ino_a041d65f9ac5e3bc2381389181c4ebca0}{pinR}} = 9
+\begin{DoxyCompactList}\small\item\em PWM pin for Red channel. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \doxymbox{\hyperlink{_analog_input_8ino_ae2c295da152e7c2bb4f7535fe4d3818d}{pinG}} = 10
+\begin{DoxyCompactList}\small\item\em PWM pin for Green channel. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \doxymbox{\hyperlink{_analog_input_8ino_a75b5e382f2d42f0aee16d334f014c780}{pinB}} = 11
+\begin{DoxyCompactList}\small\item\em PWM pin for Blue channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\label{doc-func-members}
+\Hypertarget{_analog_input_8ino_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_analog_input_8ino_afe461d27b9c48d5921c00d521181f12f}\index{AnalogInput.ino@{AnalogInput.ino}!loop@{loop}}
+\index{loop@{loop}!AnalogInput.ino@{AnalogInput.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_analog_input_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Arduino main loop. 
+
+1) Reads the ADC value from the potentiometer (0..1023). 2) Converts it into volts using VREF. 3) Prints the ADC value and voltage to Serial with 3 decimals. 4) Normalizes the voltage from 0..5.\+0V into a factor t in range 0..1. 5) Fades the RGB LED from purple to red by decreasing the blue channel. \Hypertarget{_analog_input_8ino_a69352682ab45c5d2781a83171b820c83}\index{AnalogInput.ino@{AnalogInput.ino}!setRGB@{setRGB}}
+\index{setRGB@{setRGB}!AnalogInput.ino@{AnalogInput.ino}}
+\doxysubsubsection{\texorpdfstring{setRGB()}{setRGB()}}
+{\footnotesize\ttfamily \label{_analog_input_8ino_a69352682ab45c5d2781a83171b820c83} 
+void set\+RGB (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{g}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Write PWM values to the RGB LED. 
+
+The input values are constrained to the valid PWM range (0..255) before being written with analog\+Write(). For a common-\/cathode RGB LED, higher values mean brighter light for that color channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red channel intensity (0..255) \\
+\hline
+{\em g} & Green channel intensity (0..255) \\
+\hline
+{\em b} & Blue channel intensity (0..255) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_analog_input_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{AnalogInput.ino@{AnalogInput.ino}!setup@{setup}}
+\index{setup@{setup}!AnalogInput.ino@{AnalogInput.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_analog_input_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Arduino setup function. 
+
+Initializes serial communication and configures RGB pins as outputs. Also turns the RGB LED off initially. 
+
+\label{doc-var-members}
+\Hypertarget{_analog_input_8ino_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_analog_input_8ino_a38d31debacab12adef424a4fcc632e66}\index{AnalogInput.ino@{AnalogInput.ino}!MAX\_INPUT\_VOLT@{MAX\_INPUT\_VOLT}}
+\index{MAX\_INPUT\_VOLT@{MAX\_INPUT\_VOLT}!AnalogInput.ino@{AnalogInput.ino}}
+\doxysubsubsection{\texorpdfstring{MAX\_INPUT\_VOLT}{MAX\_INPUT\_VOLT}}
+{\footnotesize\ttfamily \label{_analog_input_8ino_a38d31debacab12adef424a4fcc632e66} 
+const float MAX\+\_\+\+INPUT\+\_\+\+VOLT = 5.\+0}
+
+
+
+Maximum expected input voltage from the potentiometer in volts. 
+
+In this exercise the potentiometer is wired between 5.\+0V and GND, so the wiper voltage range is 0..5.\+0V. \Hypertarget{_analog_input_8ino_a75b5e382f2d42f0aee16d334f014c780}\index{AnalogInput.ino@{AnalogInput.ino}!pinB@{pinB}}
+\index{pinB@{pinB}!AnalogInput.ino@{AnalogInput.ino}}
+\doxysubsubsection{\texorpdfstring{pinB}{pinB}}
+{\footnotesize\ttfamily \label{_analog_input_8ino_a75b5e382f2d42f0aee16d334f014c780} 
+const uint8\+\_\+t pinB = 11}
+
+
+
+PWM pin for Blue channel. 
+
+\Hypertarget{_analog_input_8ino_ae2c295da152e7c2bb4f7535fe4d3818d}\index{AnalogInput.ino@{AnalogInput.ino}!pinG@{pinG}}
+\index{pinG@{pinG}!AnalogInput.ino@{AnalogInput.ino}}
+\doxysubsubsection{\texorpdfstring{pinG}{pinG}}
+{\footnotesize\ttfamily \label{_analog_input_8ino_ae2c295da152e7c2bb4f7535fe4d3818d} 
+const uint8\+\_\+t pinG = 10}
+
+
+
+PWM pin for Green channel. 
+
+\Hypertarget{_analog_input_8ino_a041d65f9ac5e3bc2381389181c4ebca0}\index{AnalogInput.ino@{AnalogInput.ino}!pinR@{pinR}}
+\index{pinR@{pinR}!AnalogInput.ino@{AnalogInput.ino}}
+\doxysubsubsection{\texorpdfstring{pinR}{pinR}}
+{\footnotesize\ttfamily \label{_analog_input_8ino_a041d65f9ac5e3bc2381389181c4ebca0} 
+const uint8\+\_\+t pinR = 9}
+
+
+
+PWM pin for Red channel. 
+
+\Hypertarget{_analog_input_8ino_a47c8bfff20afd60331358be0b0095d55}\index{AnalogInput.ino@{AnalogInput.ino}!potPin@{potPin}}
+\index{potPin@{potPin}!AnalogInput.ino@{AnalogInput.ino}}
+\doxysubsubsection{\texorpdfstring{potPin}{potPin}}
+{\footnotesize\ttfamily \label{_analog_input_8ino_a47c8bfff20afd60331358be0b0095d55} 
+const uint8\+\_\+t pot\+Pin = A0}
+
+
+
+Analog input pin connected to the potentiometer wiper. 
+
+\Hypertarget{_analog_input_8ino_aa29df58d662950252b03ab8728847318}\index{AnalogInput.ino@{AnalogInput.ino}!VREF@{VREF}}
+\index{VREF@{VREF}!AnalogInput.ino@{AnalogInput.ino}}
+\doxysubsubsection{\texorpdfstring{VREF}{VREF}}
+{\footnotesize\ttfamily \label{_analog_input_8ino_aa29df58d662950252b03ab8728847318} 
+const float VREF = 5.\+0}
+
+
+
+ADC reference voltage in volts. 
+
+Default Uno analog reference is \texorpdfstring{$\sim$}{\string~}5V (can vary slightly depending on USB power). 

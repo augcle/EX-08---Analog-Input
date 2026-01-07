@@ -1,0 +1,20 @@
+\indexentry{AnalogInput Directory Reference@{AnalogInput Directory Reference}|hyperpage}{5}
+\indexentry{AnalogInput/AnalogInput.ino@{AnalogInput/AnalogInput.ino}|hyperpage}{7}
+\indexentry{AnalogInput.ino@{AnalogInput.ino}!loop@{loop}|hyperpage}{8}
+\indexentry{loop@{loop}!AnalogInput.ino@{AnalogInput.ino}|hyperpage}{8}
+\indexentry{AnalogInput.ino@{AnalogInput.ino}!setRGB@{setRGB}|hyperpage}{8}
+\indexentry{setRGB@{setRGB}!AnalogInput.ino@{AnalogInput.ino}|hyperpage}{8}
+\indexentry{AnalogInput.ino@{AnalogInput.ino}!setup@{setup}|hyperpage}{8}
+\indexentry{setup@{setup}!AnalogInput.ino@{AnalogInput.ino}|hyperpage}{8}
+\indexentry{AnalogInput.ino@{AnalogInput.ino}!MAX\_INPUT\_VOLT@{MAX\_INPUT\_VOLT}|hyperpage}{8}
+\indexentry{MAX\_INPUT\_VOLT@{MAX\_INPUT\_VOLT}!AnalogInput.ino@{AnalogInput.ino}|hyperpage}{8}
+\indexentry{AnalogInput.ino@{AnalogInput.ino}!pinB@{pinB}|hyperpage}{8}
+\indexentry{pinB@{pinB}!AnalogInput.ino@{AnalogInput.ino}|hyperpage}{8}
+\indexentry{AnalogInput.ino@{AnalogInput.ino}!pinG@{pinG}|hyperpage}{9}
+\indexentry{pinG@{pinG}!AnalogInput.ino@{AnalogInput.ino}|hyperpage}{9}
+\indexentry{AnalogInput.ino@{AnalogInput.ino}!pinR@{pinR}|hyperpage}{9}
+\indexentry{pinR@{pinR}!AnalogInput.ino@{AnalogInput.ino}|hyperpage}{9}
+\indexentry{AnalogInput.ino@{AnalogInput.ino}!potPin@{potPin}|hyperpage}{9}
+\indexentry{potPin@{potPin}!AnalogInput.ino@{AnalogInput.ino}|hyperpage}{9}
+\indexentry{AnalogInput.ino@{AnalogInput.ino}!VREF@{VREF}|hyperpage}{9}
+\indexentry{VREF@{VREF}!AnalogInput.ino@{AnalogInput.ino}|hyperpage}{9}
